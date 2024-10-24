@@ -1,0 +1,15 @@
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -260,12 +260,3 @@ if(MINGW)
+         COMPONENT App
+     )
+ endif()
+-
+-install(CODE "
+-    include(BundleUtilities)
+-    if(APPLE)
+-        set(BU_CHMOD_BUNDLE_ITEMS on)
+-    endif()
+-    fixup_bundle(\"${APPS}\" \"${additionalLib}\" \"${libSearchDirs}\")
+-    " DESTINATION . COMPONENT App
+-)

@@ -13395,6 +13395,10 @@ with pkgs;
 
   inherit (openconnectPackages) openconnect openconnect_openssl;
 
+  openconnect-gui = qt6Packages.callPackage ../by-name/op/openconnect-gui/package.nix {
+    inherit (darwin.apple_sdk.frameworks) Security;
+  };
+
   ding-libs = callPackage ../tools/misc/ding-libs { };
 
   sssd = callPackage ../os-specific/linux/sssd {
