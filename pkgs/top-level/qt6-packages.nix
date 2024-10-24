@@ -80,6 +80,8 @@ makeScopeWithSplicing' {
 
   qtpbfimageplugin = callPackage ../development/libraries/qtpbfimageplugin { };
 
+  qtsingleapplication = callPackage ../development/libraries/qtsingleapplication { };
+
   qtstyleplugin-kvantum = kdePackages.callPackage ../development/libraries/qtstyleplugin-kvantum { };
 
   qtutilities = callPackage ../development/libraries/qtutilities { };
